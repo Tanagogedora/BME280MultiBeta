@@ -122,9 +122,11 @@ Original Source: http://www.micropython.org.cn
 元コード提供元（参考）：http://www.micropython.org.cn
 
 ## Release Note / リリースノート
+
 ### 1.20 2025-5-2
-Change the block display to Japanese only. 
-ブロックの表示部を日本語表示のみに変更 
+Change the block display to Japanese only.  
+ブロックの表示部を日本語表示のみに変更  
+
 ### 1.11 2025-4-30
 Changes from 1.10 
 Internal processing of pressure, temperature, and humidity. 
