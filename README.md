@@ -40,6 +40,7 @@ Sensor values are based on the official BME280 datasheet.
 - **Pressing button A** displays the **temperature** (in Celsius, with one decimal place) on the micro:bit LED.
 - **Pressing button B** displays the **air pressure** (in hPa, with one decimal place) on the micro:bit LED.
 - **Pressing button A+B** displays the **humidity** (in %, with one decimal place) on the micro:bit LED.
+  
 🎯 次のサンプル（ブロック／スクリプト）は、以下のような動作を行います：
 - I2C接続により、気象センサー BME280 と micro:bit が接続されます（アドレス：`0x76`）。
 - BMP280 が有効化され、気温・気圧の測定が可能になります。
