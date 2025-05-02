@@ -1,6 +1,6 @@
 {
-    "name": "BME280拡張機能日本語対応",
-    "description": "",
+    "name": "bme280-jp",
+    "description": "BME280 Extended Function Japanese Version / BME280拡張機能日本語版",
     "dependencies": {
         "core": "*",
         "radio": "*",
