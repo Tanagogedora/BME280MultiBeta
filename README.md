@@ -127,8 +127,8 @@ Original Source: http://www.micropython.org.cn
 Change the block display to Japanese only.  
 ブロックの表示部を日本語表示のみに変更  
 
-### 1.11 2025-4-30
-Changes from 1.10 
+### 1.11 2025-4-30 
+Changes from 1.10  
 Internal processing of pressure, temperature, and humidity. 
 Precision (number of digits) for each pressure, temperature, and humidity block can now be selected to either integer or 1 decimal place. 
 Added a block to calculate altitude difference. 
