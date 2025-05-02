@@ -77,23 +77,24 @@ namespace BME280 {
     // Selection of Saturated Water Vapor Pressure,
     // and Saturated Water Vapor Amount
     // 飽和水蒸気圧・飽和水蒸気量選択
-    // 今後の修正以・変更のために残してある。
+    // 今後の修正・変更のために残してある。
 
     export enum Spad {
-        //% block="Saturated Water Vapor Presure / 飽和水蒸気圧"
+        //% block="飽和水蒸気圧"
             swp=1,
-        //% block="Saturated Water Vapor Amount / 飽和水蒸気量"
+        //% block="飽和水蒸気量"
             swa=2
     }
 
     // Selection Humidity Selection,Water Vapor Pressure and Water Vapor Amount 
     // 相対湿度・水蒸気圧・水蒸気量の選択
+    // 今後の修正・変更のために残してある。
     export enum SelecHPA {
-        // block="Humidit / 湿度"
+        // block="湿度"
             hmdy=1,
-        // block="Water Vapor Pressure / 水蒸気圧"
+        // block="水蒸気圧"
             wvp=2,
-        // block="Water Vapor Amount / 水蒸気量"
+        // block="水蒸気量"
             wva=3
     }
    
@@ -102,9 +103,9 @@ namespace BME280 {
     // Integer / 1　decimal place
     // 整数 / 小数第1位
     export enum RPoint {
-        //% block="Integer/整数"
+        //% block="整数"
             Rint=1,
-        //% block="1 demicl place / 小数第1位"
+        //% block="小数第1位"
             RPt=10
     }
         
@@ -374,7 +375,7 @@ namespace BME280 {
      *  @returns Pressure value(Integer or decimal place) / 気圧の値（整数または小数第1位）         
      */
     //% blockId="BME280_GET_PRESSURE"
-    //% block="Pressuer / 気圧 %Pu　Precision / 精度 %Prd"
+    //% block="気圧: %Pu　精度: %Prd"
     //% weight=80 blockGap=8
     export function pressure(Pu: BME280_P,Prd: RPoint): number {
         get();
@@ -387,7 +388,7 @@ namespace BME280 {
      * @returns Temperature value.(Integer or decimal place) / 気温の値（整数または小数第1位）
      */
     //% blockId="BME280_GET_TEMPERATURE"
-    //% block="Tempratuere /気温 %Tu Precision / 精度 %Trd"
+    //% block="気温: %Tu 精度: %Trd"
     //% weight=80 blockGap=8
     export function temperature(Tu: BME280_T, Trd: RPoint): number {
         get();
@@ -406,7 +407,7 @@ namespace BME280 {
      * @returns Humidity value.(Integer or decimal place) / 湿度の値（整数または小数第1位）
      */
     //% blockId="BME280_GET_HUMIDITY"
-    //% block="Humidity / 湿度 Precision / 精度 %Hrd"
+    //% block="湿度  精度: %Hrd"
     //% weight=80 blockGap=8
     export function humidity(Hrd:RPoint): number {
         get();
@@ -418,7 +419,7 @@ namespace BME280 {
      * power on / センサー起動
      */
     //% blockId="BME280_POWER_ON" block="
-    //% block="Power On Sensor /センサー起動""
+    //% block="センサー起動""
     //% weight=22 blockGap=8
     export function PowerOn() {
         setreg(0xF4, 0x2F)
@@ -428,7 +429,7 @@ namespace BME280 {
      * power oFF　センサー停止
      */
     //% blockId="BME280_POWER_OFF"
-    //% block="Power OFF Sensor/センサー停止"
+    //% block="センサー停止"
     //% weight=21 blockGap=8
     export function PowerOff() {
         setreg(0xF4, 0)
@@ -441,7 +442,7 @@ namespace BME280 {
      * 基準点の気圧P0をブロックに入力
      * 現在の気圧・気温はセンサ-から取得
      */
-    //% block="Elevation difference(標高差) %ELU Pressure (reference point)(気圧(基準点)) %P0 %uP0"
+    //% block="標高差: %ELU  気圧(基準点)): %P0  %uP0"
     //% blockId="Elevation_difference"
     //% weight=80  blockGap=8
     export function getElevationdifference(Elu:Eldf,P0: number, uP1: BME280_P):number {
@@ -473,7 +474,7 @@ namespace BME280 {
      * Calculate Saturated Vapor Pressure,
      * 飽和水蒸気圧
      */
-    //% block="Saturated Vapor Pressure（飽和水蒸気圧）Temp/温度 %Ctemp Precision/精度 %SPdtp"
+    //% block="飽和水蒸気圧 現在の温度: %Ctemp  精度: %SPdtp"
     //% weight=60 blockGap=10
     export function Calcsvp (Ctemp: number,SPdtp: RPoint) : number
     {
@@ -487,7 +488,7 @@ namespace BME280 {
      * Calculate Saturated Vapor Amount,
      * 飽和水蒸気量計算
      */
-    //% block="Saturated Vapor Amount（飽和水蒸気量） Temp/温度 %Ctemp Precision/精度 %Sadtp"
+    //% block="飽和水蒸気量  現在の温度: %Ctemp  精度: %Sadtp"
     //% weight=60 blockGap=10
     export function Calcsva(Ctemp: number, Sadtp: RPoint): number {
         let Rpnt = Sadtp;
@@ -501,7 +502,7 @@ namespace BME280 {
      * Dew Point:Improved Magnus formula / 露点：改良マグヌス式
      * 露点
      */
-    //% block="Dew Point/露点　Temp/温度 %Dtemp Humidity / 湿度　%RH　Precision/精度 %dtprec"
+    //% block="露点　現在の温度: %Dtemp  現在の湿度: %RH　精度: %dtprec"
     //% weight=60 blockGap=10
     export function getDewpoint(Dtemp: number, RH: number, dtprec: RPoint):number
     {
@@ -523,7 +524,7 @@ namespace BME280 {
      * @param dat Threshold value / しきい値（Pa）
      * @param body Action to perform / 実行する処理
      */
-    //% block="Pressuer / 気圧 <  %dat" dat.defl=100000
+    //% block="気圧 <  %dat" dat.defl=100000
     export function PressureBelowThan(dat: number, body: () => void): void {
         control.inBackground(function () {
             while (true) {
@@ -542,7 +543,7 @@ namespace BME280 {
      * @param dat Threshold value / しきい値（Pa）
      * @param body Action to perform / 実行する処理
      */
-    //% block="Pressuer / 気圧 > %dat" dat.defl=100000
+    //% block="気圧 > %dat" dat.defl=100000
     export function PressureHigherThan(dat: number, body: () => void): void {
         control.inBackground(function () {
             while (true) {
@@ -562,7 +563,7 @@ namespace BME280 {
      * @param dat Threshold value / しきい値（C）
      * @param body Action to perform / 実行する処理
      */
-    //% block="Temperature / 気温 < %dat" dat.defl=10
+    //% block="気温 < %dat" dat.defl=10
     export function TemperatureBelowThan(dat: number, body: () => void): void {
         control.inBackground(function () {
             while (true) {
@@ -582,7 +583,7 @@ namespace BME280 {
      * @param dat Threshold value / しきい値（C）
      * @param body Action to perform / 実行する処理
      */
-    //% block="Temperature / 気温 > %dat" dat.defl=30
+    //% block="気温 > %dat" dat.defl=30
     export function TemperatureHigherThan(dat: number, body: () => void): void {
         control.inBackground(function () {
             while (true) {
@@ -601,7 +602,7 @@ namespace BME280 {
      * @param dat Threshold value / しきい値（C）
      * @param body Action to perform / 実行する処理
      */
-    //% block="Humidity / 湿度 < %dat" dat.defl=10
+    //% block="湿度 < %dat" dat.defl=10
     export function HumidityBelowThan(dat: number, body: () => void): void {
         control.inBackground(function () {
             while (true) {
@@ -620,7 +621,7 @@ namespace BME280 {
      * @param dat Threshold value / しきい値（C）
      * @param body Action to perform / 実行する処理
      */
-    //% block="Humidity / 湿度 > %dat" dat.defl=10
+    //% block="湿度 > %dat" dat.defl=10
     export function HumidityHigherThan(dat: number, body: () => void): void {
         control.inBackground(function () {
             while (true) {
@@ -639,7 +640,7 @@ namespace BME280 {
      *  @param addr I2C address to set / 設定する I2C アドレス
      */
     //% blockId="BME280_SET_ADDRESS"
-    //% block="I2C Address/I2Cアドレス %addr"
+    //% block="I2Cアドレス: %addr"
     //% weight=20 blockGap=8
     export function Address(addr: BME280_I2C_ADDRESS) {
         BME280_I2C_ADDR = addr
