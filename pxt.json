@@ -1,5 +1,5 @@
 {
-    "name": "BME280拡張日本語",
+    "name": "BME280拡張機能日本語対応",
     "description": "",
     "dependencies": {
         "core": "*",
