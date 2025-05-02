@@ -122,7 +122,23 @@ Original Source: http://www.micropython.org.cn
 元コード提供元（参考）：http://www.micropython.org.cn
 
 ## Release Note / リリースノート
+### 1.20 2025-5-2
+Change the block display to Japanese only. 
+ブロックの表示部を日本語表示のみに変更 
 ### 1.11 2025-4-30
+Changes from 1.10 
+Internal processing of pressure, temperature, and humidity. 
+Precision (number of digits) for each pressure, temperature, and humidity block can now be selected to either integer or 1 decimal place. 
+Added a block to calculate altitude difference. 
+Added blocks for saturated water vapor pressure and saturated water vapor volume. 
+Changed dew point calculation method. 
+
+1.10からの変更 
+気圧・気温・湿度の内部処理 
+気圧・気温・湿度各ブロック 精度（桁数）を整数または小数第１位を選択できるように変更 
+標高差を求めるブロックの追加 
+飽和水蒸気圧と飽和水蒸気量のブロックを追加 
+露点計算方法の変更 
 
 ### 1.10 2025-4-18
 Transition from beta to official version
