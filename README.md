@@ -121,7 +121,7 @@ Original Source: http://www.micropython.org.cn
 
 ## Release Note / リリースノート
 
-### 1.20 2025-5-2
+### 1.12 2025-5-2
 Change the block display to Japanese only.  
 ブロックの表示部を日本語表示のみに変更  
 
