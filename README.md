@@ -121,8 +121,17 @@ Original Source: http://www.micropython.org.cn
 
 元コード提供元（参考）：http://www.micropython.org.cn
 
+## Release Note / リリースノート
+### 1.11 2025-4-30
 
-## 📝 ライセンス / License
+### 1.10 2025-4-18
+Transition from beta to official version
+Blocks now in both English and Japanese
+
+Beta版から正式版へ移行
+ブロックの日本語/英語併記
+
+## 📝 License / ライセンス 
 
 MIT License
 
