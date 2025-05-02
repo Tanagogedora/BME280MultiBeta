@@ -8,7 +8,7 @@ Sensor values are based on the official BME280 datasheet.
 気圧・気温・湿度の測定が可能です。センサー仕様は BME280 のデータシートに基づいています。
 
  
-> 🔗 Demo Page:**デモページを見る: [https://tanagogedora.github.io/BME280_JP/](https://tanagogedora.github.io/BME280_JP/)
+> 🔗 Demo Page:**デモページを見る: [https://tanagogedora.github.io/bme280-jp/](https://tanagogedora.github.io/bme280-ip/)
 
 ---
 ## 📦 How to Use / 使い方
@@ -17,7 +17,7 @@ Sensor values are based on the official BME280 datasheet.
 1. Create a new project
 1. Click the gear icon (⚙) in the top-right → select “Extensions”
 1. Paste the following URL to add the extension  
-	 `https://github.com/tanagogedora/BME280_JP` 
+	 `https://github.com/tanagogedora/bme280-jp` 
 
 ---
 
@@ -27,7 +27,7 @@ Sensor values are based on the official BME280 datasheet.
 1. 「新しいプロジェクト」をクリック
 1. 画面右上のギアボタン（⚙）をクリックし、「拡張機能」を選択 
 1. 下記の URL を検索または貼り付けてインポート    
-	`https://github.com/tanagogedora/BME280_JP`
+	`https://github.com/tanagogedora/bme280-jp` 
 
 
 ---
@@ -51,10 +51,10 @@ Sensor values are based on the official BME280 datasheet.
 ### 🖼 Sample Blocks / ブロックの使用例 
 
 English
-![BME280 ブロック](https://github.com/Tanagogedora/BME280_JP/blob/main/BMP280Block_en.png?raw=true)
+![BME280 ブロック](https://github.com/Tanagogedora/bmE280-jp/blob/main/BMP280Block_en.png?raw=true)
 
 日本語 
-![BME280 ブロック](https://github.com/Tanagogedora/BME280_JP/blob/main/BMP280Block_jp.png?raw=true)
+![BME280 ブロック](https://github.com/Tanagogedora/bme280-jp/blob/main/BMP280Block_jp.png?raw=true)
 
 💻 Sample Code / JavaScriptサンプル 
 ```javascript
@@ -79,7 +79,7 @@ input.onButtonPressed(Button.B, function () {
 1. Open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 1. Click "Import" → "Import URL"  
 1. Paste this URL  
-   `https://github.com/tanagogedora/BME280_JP`
+   `https://github.com/tanagogedora/bme280-jp` 
 
 
 ---
@@ -89,7 +89,7 @@ input.onButtonPressed(Button.B, function () {
 1. MakeCode [https://makecode.microbit.org/](https://makecode.microbit.org/) を開く
 1. 「読み込む」→「URLから読み込む…」を選択
 1. 以下の URL を貼り付けてインポート   
-	`https://github.com/tanagogedora/BME280_JP`
+	`https://github.com/tanagogedora/bme280-jp` 
 
 ---
 
