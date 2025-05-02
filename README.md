@@ -136,11 +136,11 @@ Added blocks for saturated water vapor pressure and saturated water vapor volume
 Changed dew point calculation method. 
 
 1.10からの変更 
-気圧・気温・湿度の内部処理 
-気圧・気温・湿度各ブロック 精度（桁数）を整数または小数第１位を選択できるように変更 
-標高差を求めるブロックの追加 
-飽和水蒸気圧と飽和水蒸気量のブロックを追加 
-露点計算方法の変更 
+気圧・気温・湿度の内部処理  
+気圧・気温・湿度各ブロック 精度（桁数）を整数または小数第１位を選択できるように変更  
+標高差を求めるブロックの追加  
+飽和水蒸気圧と飽和水蒸気量のブロックを追加  
+露点計算方法の変更  
 
 ### 1.10 2025-4-18
 Transition from beta to official version
