@@ -51,10 +51,10 @@ Sensor values are based on the official BME280 datasheet.
 ### 🖼 Sample Blocks / ブロックの使用例 
 
 English
-![BME280 ブロック](https://github.com/Tanagogedora/BME280_JP/blob/main/BME280en.png?raw=true)
+![BME280 ブロック](https://github.com/Tanagogedora/BME280_JP/blob/main/BMP280Block_en.png?raw=true)
 
 日本語 
-![BME280 ブロック](https://github.com/Tanagogedora/BME280_JP/blob/main/BME280ja.png?raw=true)
+![BME280 ブロック](https://github.com/Tanagogedora/BME280_JP/blob/main/BMP280Block_jp.png?raw=true)
 
 💻 Sample Code / JavaScriptサンプル 
 ```javascript
