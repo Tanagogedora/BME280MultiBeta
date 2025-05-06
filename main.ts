@@ -330,7 +330,7 @@ namespace BME280 {
         _p = (_p / var1) * 2 ;
         var1 = (dig_P9 * (((_p >> 3) * (_p >> 3)) >> 13)) >> 12;
         var2 = (((_p >> 2)) * dig_P8) >> 13;
-        P =Rnber(_p + ((var1 + var2 + dig_P7) >> 4),100);
+        P =Rnber(_p + ((var1 + var2 + dig_P7) >> 4),10);
 
         // Calculate Humidity/	湿度の計算
         // Read raw pressure data (16 bits)
