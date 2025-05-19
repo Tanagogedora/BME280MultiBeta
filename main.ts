@@ -457,7 +457,7 @@ namespace BME280 {
      * 標高差の値（整数/小数第１位） 
      * 単位　ｍ/ft
      */
-    //% block="標高差 %ELU 準気圧 %P0 単位 %uP0 精度 %RndEl"
+    //% block="標高差 %ELU 基準気圧 %P0 単位 %uP0 精度 %RndEl"
     //% blockId="Elevation_difference"
     //% weight=80  blockGap=8
     export function getElevationdifference(Elu: Eldf, P0: number, uP0: BME280_P, RndEl: Rpoint2): number {
