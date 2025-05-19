@@ -124,17 +124,17 @@ Original Source: http://www.micropython.org.cn
 ## Release Note / リリースノート
 
 ### 1.20 2025-5-19  
-Change in numerical precision (decimal points)  
-** Internal processing **  
+#### Change in numerical precision (decimal points)  
+##### Internal processing  
 Internal processing of pressure, temperature, and humidity has been unified to two decimal places.  
-** Data values ​​to the outside **  
+##### Data values ​​to the outside  
 Pressure, temperature, and humidity have been changed to select integer, 1st decimal place, or 2nd decimal place.  
 Altitude difference, saturated water vapor pressure, saturated water vapor amount, and dew point have been changed to integer or 1st decimal place.  
 
-数値の精度（小数点以下）の変更  
-** 内部処理 **  
+####  数値の精度（小数点以下）の変更  
+##### 内部処理    
 気圧、気温、湿度の内部処理は小数第２位までの数値に統一  
-** 外部へのデータ値 **  
+##### 外部へのデータ値     
 気圧、気温、湿度は整数・小数第１位・小数第２位の選択に変更  
 標高差、飽和水蒸気圧、飽和水蒸気量、露点は整数または小数第１位に変更  
 
