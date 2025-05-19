@@ -1,4 +1,4 @@
-# Sensor Extension for micro:bit
+# Sensor Extension for micro:bit BME280 extended function Japanese support
 # micro:bit 用 BME280 センサー拡張機能(日本語用)
 
 You can measure atmospheric pressure, temperature, and humidity.  
