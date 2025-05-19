@@ -399,7 +399,7 @@ namespace BME280 {
      * 気温の値（整数/小数第１位/小数第2位）
      */
     //% blockId="BME280_GET_TEMPERATURE"
-    //% block="気温: %Tu 精度 %Trd"
+    //% block="気温 %Tu 精度 %Trd"
     //% weight=80 blockGap=8
     export function temperature(Tu: BME280_T, Trd: RPoint): number {
         get();
@@ -415,13 +415,12 @@ namespace BME280 {
      * Get humidity value from BME280 sensor / BME280 センサーから湿度を取得
      *
      * @param u Humidity unit % / 湿度の単位 %
-     * @returns Humidity value.(Integer or 1st decimal place or 2nd decimal place) 
-     * 湿度の値（整数/小数第１位/小数第2位）
+     * @returns Humidity value.(Integer or  2 decimal place) / 湿度の値（整数または小数第２位）
      */
     //% blockId="BME280_GET_HUMIDITY"
     //% block="湿度 精度 %Hrd"
     //% weight=80 blockGap=8
-    export function humidity(Hrd: Rpoint): number {
+    export function humidity(Hrd: Rpoint2): number {
         get();
         return Rnber(H, Hrd);
     }
@@ -451,14 +450,14 @@ namespace BME280 {
      * Calculate Elevation difference /標高差の計算
      * Input the reference point pressure P0 into the block
      * Get the current pressure and temperature from the sensor.
-     * Elavation differrence value（Integer or 1st decimal place）
+     * Elavation differrence value（Integer or 1st decimal place ）
      * Unit m or ft
      * 基準点の気圧P0をブロックに入力
      * 現在の気圧・気温はセンサ-から取得
      * 標高差の値（整数/小数第１位） 
      * 単位　ｍ/ft
      */
-    //% block="標高差 %ELU 基準気圧 %P0 単位 %uP0 精度 %RndEl"
+    //% block="標高差 %ELU 準気圧 %P0 単位 %uP0 精度 %RndEl"
     //% blockId="Elevation_difference"
     //% weight=80  blockGap=8
     export function getElevationdifference(Elu: Eldf, P0: number, uP0: BME280_P, RndEl: Rpoint2): number {
@@ -498,7 +497,6 @@ namespace BME280 {
 
     /**
      * Calculate Saturated Vapor Pressure,
-     * Precision Integer or 1st decimal place	
      * 飽和水蒸気圧
      * 整数または小数第1位
      */
@@ -512,7 +510,6 @@ namespace BME280 {
     }
     /**
      * Calculate Realtime Saturated Vapor Pressure,
-     * Precision Integer or 1st decimal place
      * 飽和水蒸気圧（リアルタイム）
      * 整数または小数第1位
      */
@@ -601,7 +598,6 @@ namespace BME280 {
    */
     /**
      * Triggered when pressure is Lower than a specified value. / 気圧が指定値より低い場合
-     *
      * @param dat Threshold value / しきい値（Pa）
      * @param body Action to perform / 実行する処理
      */
@@ -639,8 +635,7 @@ namespace BME280 {
 
     /**
      * Triggered when temprature is Lower than a specified value. 
-     *  気温が指定値より低い場合
-     *
+     * 気温が指定値より低い場合
      * @param dat Threshold value / しきい値（C）
      * @param body Action to perform / 実行する処理
      */
