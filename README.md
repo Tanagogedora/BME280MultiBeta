@@ -8,7 +8,7 @@ Sensor values are based on the official BME280 datasheet.
 気圧・気温・湿度の測定が可能です。センサー仕様は BME280 のデータシートに基づいています。
 
  
-> 🔗 Demo Page:**デモページを見る: [https://tanagogedora.github.io/bme280-jp/](https://tanagogedora.github.io/bme280-ip/)
+> 🔗 Demo Page:**デモページを見る: [https://tanagogedora.github.io/bme280-jp/](https://tanagogedora.github.io/bme280-jp/)
 
 ---
 ## 📦 How to Use / 使い方
