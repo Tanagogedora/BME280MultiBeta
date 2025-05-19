@@ -451,7 +451,7 @@ namespace BME280 {
      * Calculate Elevation difference /標高差の計算
      * Input the reference point pressure P0 into the block
      * Get the current pressure and temperature from the sensor.
-     * Elavation differrence value（Integer or 1st decimal place ）
+     * Elavation differrence value（Integer or 1st decimal place）
      * Unit m or ft
      * 基準点の気圧P0をブロックに入力
      * 現在の気圧・気温はセンサ-から取得
@@ -498,6 +498,7 @@ namespace BME280 {
 
     /**
      * Calculate Saturated Vapor Pressure,
+     * Precision Integer or 1st decimal place	
      * 飽和水蒸気圧
      * 整数または小数第1位
      */
@@ -511,6 +512,7 @@ namespace BME280 {
     }
     /**
      * Calculate Realtime Saturated Vapor Pressure,
+     * Precision Integer or 1st decimal place
      * 飽和水蒸気圧（リアルタイム）
      * 整数または小数第1位
      */
