@@ -65,10 +65,10 @@ input.onButtonPressed(Button.A, function () {
     basic.showString("" + BME280.temperature(BME280.BME280_T.T_C, BME280.RPoint.RPt) + "C")
 })
 input.onButtonPressed(Button.AB, function () {
-    basic.showString("" + BME280.humidity(BME280.RPoint.RPt) + "%")
+    basic.showString("" + BME280.humidity(BME280.Rpoint2.RP1st) + "％")
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showString("" + BME280.pressure(BME280.BME280_P.hPa, BME280.RPoint.RPt) + "hPA")
+    basic.showString("" + BME280.pressure(BME280.BME280_P.hPa, BME280.RPoint.RPt) + "hPa")
 })
 
 ```
