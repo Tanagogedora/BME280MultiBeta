@@ -415,12 +415,13 @@ namespace BME280 {
      * Get humidity value from BME280 sensor / BME280 センサーから湿度を取得
      *
      * @param u Humidity unit % / 湿度の単位 %
-     * @returns Humidity value.(Integer or  2 decimal place) / 湿度の値（整数または小数第２位）
+     * @returns Humidity value.(Integer or 1st decimal place or 2nd decimal place) 
+     * 湿度の値（整数/小数第１位/小数第2位）
      */
     //% blockId="BME280_GET_HUMIDITY"
     //% block="湿度 精度 %Hrd"
     //% weight=80 blockGap=8
-    export function humidity(Hrd: Rpoint2): number {
+    export function humidity(Hrd: Rpoint): number {
         get();
         return Rnber(H, Hrd);
     }
