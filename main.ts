@@ -459,7 +459,7 @@ namespace BME280 {
     //% block="標高差 %ELU 精度 %RndEl 基準気圧 %P0 気圧単位 %uP0"
     //% blockId="Elevation_difference"
     //% weight=80  blockGap=8
-    export function getElevationdifference(Elu: Eldf, P0: number, uP0: BME280_P, RndEl: Rpoint2): number {
+    export function getElevationdifference(Elu: Eldf,RndEl: Rpoint2,P0: number, uP0: BME280_P): number {
         get();
         // 精度
         let Rpnt = RndEl;
