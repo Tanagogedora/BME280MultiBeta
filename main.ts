@@ -173,7 +173,6 @@ namespace BME280 {
      *
      * @param reg Register address (integer) / レジストリアドレス（整数値）
      * @returns Value read (integer) / 読み取った値（整数値）
-     *
      * Sends the register address via I2C using UInt8BE format,
      * then reads 1 byte from the device.
      * レジストリアドレスを UInt8BE 形式で送信し、1 バイトを読み取って返す。
@@ -457,7 +456,7 @@ namespace BME280 {
      * 標高差の値（整数/小数第１位） 
      * 単位　ｍ/ft
      */
-    //% block="標高差 %ELU 基準気圧 %P0 単位 %uP0 精度 %RndEl"
+    //% block="標高差 %ELU 基準気圧 %P0 ( %uP0 ) 精度 %RndEl"
     //% blockId="Elevation_difference"
     //% weight=80  blockGap=8
     export function getElevationdifference(Elu: Eldf, P0: number, uP0: BME280_P, RndEl: Rpoint2): number {
@@ -501,6 +500,7 @@ namespace BME280 {
      * 整数または小数第1位
      */
     //% block="飽和水蒸気圧 温度 %Ctemp 精度 %SPdtp"
+    //% blockID="Saturated-Vapor_Pressure"
     //% weight=60 blockGap=10
     export function Calcsvp(Ctemp: number, SPdtp: Rpoint2): number {
         let Rpnt = SPdtp;
@@ -514,6 +514,7 @@ namespace BME280 {
      * 整数または小数第1位
      */
     //% block="飽和水蒸気圧（リアルタイム） 精度 %SPdtp"
+    //% blockID="Saturated-Vapor_Pressure_NOw"
     //% weight=60 blockGap=10
     export function Calcsvpnow(SPdtp: Rpoint2): number {
         let Rpnt = SPdtp;
@@ -529,6 +530,7 @@ namespace BME280 {
      * Integer or  decimal 1st place / 整数または小数第1位
      */
     //% block="飽和水蒸気量 温度 %Ctemp 精度 %Sadtp"
+    //% blockID="Saturated_Vapor_Amount"
     //% weight=60 blockGap=10
     export function Calcsva(Ctemp: number, Sadtp: Rpoint2): number {
         let Rpnt = Sadtp;
@@ -543,7 +545,8 @@ namespace BME280 {
         * Integer or  decimal 1st place / 整数または小数第1位
         */
      //% block="飽和水蒸気量計算（リアルタイム）精度 %Sadtp"
-    //% weight=60 blockGap=10
+     //% blockID="Saturated_Vapor_Amount_Now"
+     //% weight=60 blockGap=10
     export function Calcsvanow(Sadtp: Rpoint2): number {
         let Rpnt = Sadtp;
         let Ctempnow=T;
@@ -559,6 +562,7 @@ namespace BME280 {
      * Integer or  decimal 1st place / 整数または小数第1位
      */
     //% block="露点 温度 %Dtemp 湿度 %RH　精度 %dtprec"
+    //% blockID="Dww_Point"
     //% weight=60 blockGap=10
     export function getDewpoint(Dtemp: number, RH: number, dtprec: Rpoint2): number {
         get();
@@ -578,6 +582,7 @@ namespace BME280 {
   * Integer or  decimal 1st place / 整数または小数第1位
   */
     //% block="露点 精度 %dtprec"
+    //% blockID="Dww_Point_Now"
     //% weight=60 blockGap=10
     export function getDewpointnow(dtprec: Rpoint2): number {
         get();
