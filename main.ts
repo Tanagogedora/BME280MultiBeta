@@ -419,7 +419,7 @@ namespace BME280 {
     //% blockId="BME280_GET_HUMIDITY"
     //% block="湿度 精度 %Hrd"
     //% weight=80 blockGap=8
-    export function humidity(Hrd: Rpoint): number {
+    export function humidity(Hrd:RPoint): number {
         get();
         return Rnber(H, Hrd);
     }
@@ -459,7 +459,7 @@ namespace BME280 {
     //% block="標高差 %ELU 精度 %RndEl 基準気圧 %P0 気圧単位 %uP0"
     //% blockId="Elevation_difference"
     //% weight=80  blockGap=8
-    export function getElevationdifference(Elu: Eldf,RndEl: Rpoint2,P0: number, uP0: BME280_P): number {
+    export function getElevationdifference(Elu: Eldf, RndEl: Rpoint2, P0: number, uP0: BME280_P): number {
         get();
         // 精度
         let Rpnt = RndEl;
@@ -477,7 +477,7 @@ namespace BME280 {
         // Adjust the initial and local pressures to the desired altitude difference precision
         // (number of decimal points)
         // 求める標高差の精度（小数点以下の桁数）に初期気圧・現地気圧を合わせる
-        let Rpnttimes10=Rpnt*10;
+        let Rpnttimes10 = Rpnt * 10;
         P0 = Rnber(P0, Rpnttimes10);
         Eprs = Rnber(Eprs, Rpnttimes10);
 
@@ -518,7 +518,7 @@ namespace BME280 {
     //% weight=60 blockGap=10
     export function Calcsvpnow(SPdtp: Rpoint2): number {
         let Rpnt = SPdtp;
-        let Tempnow=T;
+        let Tempnow = T;
         let SatVapPressnow = SatVpad(Tempnow, Rpnt);
         let SVPnow = SatVapPressnow;
         return Rnber(SVPnow, Rpnt);
@@ -544,12 +544,12 @@ namespace BME280 {
         * 飽和水蒸気量計算（リアルタイム）
         * Integer or  decimal 1st place / 整数または小数第1位
         */
-     //% block="飽和水蒸気量計算（リアルタイム）精度 %Sadtp"
-     //% blockID="Saturated_Vapor_Amount_Now"
-     //% weight=60 blockGap=10
+    //% block="飽和水蒸気量計算（リアルタイム）精度 %Sadtp"
+    //% blockID="Saturated_Vapor_Amount_Now"
+    //% weight=60 blockGap=10
     export function Calcsvanow(Sadtp: Rpoint2): number {
         let Rpnt = Sadtp;
-        let Ctempnow=T;
+        let Ctempnow = T;
         let SVP = SatVpad(Ctempnow, Rpnt);
         let SVA = 217 * SVP / (Ctempnow + 273.15);
         return Rnber(SVA, Rpnt);
@@ -586,8 +586,8 @@ namespace BME280 {
     //% weight=60 blockGap=10
     export function getDewpointnow(dtprec: Rpoint2): number {
         get();
-        let Dtemp=T;
-        let RH=H;
+        let Dtemp = T;
+        let RH = H;
         let da = 17.62;
         let db = 243.12;
         let alpha = Math.log(RH / 100) + (da * Dtemp) / (db + Dtemp);
@@ -596,7 +596,7 @@ namespace BME280 {
         DPoint = Rnber(DPoint, Rpnt);
         return DPoint;
     }
-    
+
     /**
     * Event Block
     * イベントブロック
