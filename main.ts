@@ -541,7 +541,7 @@ namespace BME280 {
 
     /**
         * Calculate Realtime Saturated Vapor Amount,
-        * 飽和水蒸気量計算（リアルタイム）
+        * 飽和水蒸気量（リアルタイム）
         * Integer or  decimal 1st place / 整数または小数第1位
         */
     //% block="飽和水蒸気量計算（リアルタイム）精度 %Sadtp"
