@@ -611,7 +611,9 @@ namespace BME280 {
         control.inBackground(function () {
             while (true) {
                 get();
-                if (P < dat) {
+                let Pnow=P/100 //hPaに変換
+                Pnow=Rnber(Pnow,10)
+                if (Pnow < dat) {
                     body();
                 }
                 basic.pause(1000);
@@ -622,7 +624,7 @@ namespace BME280 {
     /**
      * Triggered when pressure is Higher than a specified value.
      * 気圧が指定値より高い場合
-     * @param dat Threshold value / しきい値（Pa）
+     * @param dat Threshold value / しきい値（hPa）
      * @param body Action to perform / 実行する処理
      */
     //% block="気圧 > %dat" dat.defl=100000
@@ -630,7 +632,9 @@ namespace BME280 {
         control.inBackground(function () {
             while (true) {
                 get();
-                if (P > dat) {
+                let Pnow=P/100 //hPaに変換
+                Pnow=Rnber(Pnow,10)
+                if (Pnow > dat) {
                     body();
                 }
                 basic.pause(1000);
@@ -659,7 +663,7 @@ namespace BME280 {
 
     /**
      * Triggered when tempratuere is Lower than a specified value.
-     * 気温が指定値より低い場合
+     * 気温が指定値より高いい場合
      *
      * @param dat Threshold value / しきい値（C）
      * @param body Action to perform / 実行する処理
